@@ -28,7 +28,7 @@ PlaceInput::make('some_place')
 1.  #### onlyCities - city search only
 
 ```php
-use Enmaboya\CountrySelect\CountrySelect;
+use Enmaboya\PlaceInput\PlaceInput;
 
 PlaceInput::make('some_place')->onlyCities()
 ```
@@ -36,7 +36,7 @@ PlaceInput::make('some_place')->onlyCities()
 3.  #### onlyCountries - country search only
 
 ```php
-use Enmaboya\CountrySelect\CountrySelect;
+use Enmaboya\PlaceInput\PlaceInput;
 
 PlaceInput::make('some_place')->onlyCountries()
 ```
@@ -44,7 +44,7 @@ PlaceInput::make('some_place')->onlyCountries()
 5.  #### onlyStates - search only by state \ area
 
 ```php
-use Enmaboya\CountrySelect\CountrySelect;
+use Enmaboya\PlaceInput\PlaceInput;
 
 PlaceInput::make('some_place')->onlyStates()
 ```
@@ -52,7 +52,7 @@ PlaceInput::make('some_place')->onlyStates()
 7. #### onlyCounties - search by county only (e.g. Colombia county)
 
 ```php
-use Enmaboya\CountrySelect\CountrySelect;
+use Enmaboya\PlaceInput\PlaceInput;
 
 PlaceInput::make('some_place')->onlyCounties()
 ```
@@ -60,7 +60,7 @@ PlaceInput::make('some_place')->onlyCounties()
 8.  #### byPostalCode - search by zip code \ postal code
 
 ```php
-use Enmaboya\CountrySelect\CountrySelect;
+use Enmaboya\PlaceInput\PlaceInput;
 
 PlaceInput::make('some_place')->byPostalCode()
 ```
@@ -68,7 +68,7 @@ PlaceInput::make('some_place')->byPostalCode()
 9.  #### countries - limit the search to selected countries
 
 ```php
-use Enmaboya\CountrySelect\CountrySelect;
+use Enmaboya\PlaceInput\PlaceInput;
 
 PlaceInput::make('some_place')->countries(['RU', 'US', 'CN', 'JP'])
 ```
@@ -77,6 +77,7 @@ PlaceInput::make('some_place')->countries(['RU', 'US', 'CN', 'JP'])
 
 ```php
 use Enmaboya\CountrySelect\CountrySelect;
+use Enmaboya\PlaceInput\PlaceInput;
 
 CountrySelect::make('Country', 'county_code');
 
