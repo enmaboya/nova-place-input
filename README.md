@@ -65,7 +65,23 @@ use Enmaboya\PlaceInput\PlaceInput;
 PlaceInput::make('some_place')->byPostalCode()
 ```
 
-9.  #### countries - limit the search to selected countries
+9.  #### continents - limit the search to selected continents
+
+```php
+use Enmaboya\PlaceInput\PlaceInput;
+
+PlaceInput::make('some_place')->continents(['NA', 'SA'])
+```
+Available list of continents:
+
+ - AF - Africa
+ - AS - Asia
+ - EU - Europe
+ - NA - North America
+ - OC - Oceania
+ - SA - South America
+
+10.  #### countries - limit the search to selected countries
 
 ```php
 use Enmaboya\PlaceInput\PlaceInput;
@@ -73,7 +89,7 @@ use Enmaboya\PlaceInput\PlaceInput;
 PlaceInput::make('some_place')->countries(['RU', 'US', 'CN', 'JP'])
 ```
 
-10.  #### dependOnCountrySelect - If you use the [County Select field](https://github.com/enmaboya/nova-country-select), the search will be restricted to the country selected in County Select.
+11.  #### dependOnCountrySelect - If you use the [County Select field](https://github.com/enmaboya/nova-country-select), the search will be restricted to the country selected in County Select.
 
 ```php
 use Enmaboya\CountrySelect\CountrySelect;
