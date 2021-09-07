@@ -57,7 +57,7 @@ class PlaceInput extends Field
         ]);
     }
 
-    public function dependOn(string $field)
+    public function dependOnCountrySelect(string $field)
     {
         return $this->withMeta(['dependent_field' => $field]);
     }
