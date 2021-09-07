@@ -39,19 +39,14 @@
             inputPlace: {
                 deep: true,
                 handler() {
-                    console.log(this.linkCountry)
                     this.value = this.inputPlace || this.value;
                 },
             },
         },
 
         mounted() {
-            Nova.$on(this.field.dependent_field + "-link-place", (event) => {
-                this.setLinkCountry(event.country);
-            });
-
-            Nova.$on(this.field.dependent_field + "-link-change", (event) => {
-                this.setLinkCountry(event.country);
+            Nova.$on(this.field.dependent_field + "-change", (event) => {
+                this.setLinkCountry(event);
             });
         },
 
