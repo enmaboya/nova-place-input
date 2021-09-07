@@ -3,9 +3,12 @@
 namespace Enmaboya\PlaceInput;
 
 use Laravel\Nova\Fields\Field;
+use Enmaboya\PlaceInput\Traits\CountryTrait;
 
 class PlaceInput extends Field
 {
+    use CountryTrait;
+
     public $type = 'default';
     /**
      * The field's component.
@@ -54,6 +57,13 @@ class PlaceInput extends Field
     {
         return $this->withMeta([
             'countrycodes' => $countries
+        ]);
+    }
+
+    public function continents(array $continents)
+    {
+        return $this->withMeta([
+            'countrycodes' => $this->getCountriesByContinent($continents)
         ]);
     }
 
